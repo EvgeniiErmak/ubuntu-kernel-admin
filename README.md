@@ -32,7 +32,7 @@ wget https://kernel.ubuntu.com/mainline/v7.1/amd64/linux-modules-7.1.0-070100-ge
 Установил скачанные пакеты:
 
 ```bash
-sudo dpkg -i *.deb
+dpkg -i *.deb
 ```
 
 Проверил, что новое ядро установлено:
@@ -53,14 +53,14 @@ lrwxrwxrwx 1 root root 24 Jun 14 17:33 vmlinuz.old -> vmlinuz-6.8.0-49-generic
 Обновил конфигурацию загрузчика и назначил новое ядро по умолчанию:
 
 ```bash
-sudo update-grub
-sudo grub-set-default 0
+update-grub
+grub-set-default 0
 ```
 
 Перезагрузил систему:
 
 ```bash
-sudo reboot
+reboot
 ```
 
 После перезагрузки проверил установленную версию ядра:
